@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:responsive_dash_board/views/dashboard_view.dart';
 
 void main() {
@@ -11,16 +12,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+
+    return const MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
 
+      debugShowCheckedModeBanner: false,
+      home: DashBoradView(),
 
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const DashBoradView(),
     );
   }
 }

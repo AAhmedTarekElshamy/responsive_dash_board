@@ -17,15 +17,21 @@ class _DashBoradViewState extends State<DashBoradView> {
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    return Scaffold(
+    return const Scaffold(
 
-      backgroundColor: const Color(0xFFF7F9FA),
 
-      body: AdaptiveLayout(
+      backgroundColor: Color(0xFFF7F9FA),
+
+      body: DashboardDesktopLayout(),
+
+    );
+  }
+}
+/*
+* AdaptiveLayout(
         mobileLayout: (context) => const SizedBox(),
         tabletLayout: (context) =>const SizedBox(),
         desktopLayout: (context) => const DashboardDesktopLayout(),
       ),
-    );
-  }
-}
+*
+* */
