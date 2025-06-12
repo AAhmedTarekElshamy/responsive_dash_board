@@ -5,6 +5,7 @@ import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 import '../models/user_info_model.dart';
 import '../utils/app_images.dart';
 import '../utils/app_styles.dart';
+import 'drawer_item.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   static const UserInfoModel userInfoModel = UserInfoModel(
@@ -21,7 +22,10 @@ class CustomDrawer extends StatelessWidget {
         child: Column(
           children: [
             UserInfoListTile(userInfoModel: userInfoModel),
-
+            SizedBox(
+              height: 28,
+            ),
+            DrawerItem(),
 
           ],
         ),
