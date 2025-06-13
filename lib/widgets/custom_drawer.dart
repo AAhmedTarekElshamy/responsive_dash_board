@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
+import '../models/drawer_item_model.dart';
 import '../models/user_info_model.dart';
 import '../utils/app_images.dart';
 import '../utils/app_styles.dart';
 import 'drawer_item.dart';
+import 'drawer_item_list_view.dart';
+
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   static const UserInfoModel userInfoModel = UserInfoModel(
@@ -13,6 +16,9 @@ class CustomDrawer extends StatelessWidget {
     title: 'Lekan Okeowo',
     subTitle: 'demo@gmail.com',
   );
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,10 +29,9 @@ class CustomDrawer extends StatelessWidget {
           children: [
             UserInfoListTile(userInfoModel: userInfoModel),
             SizedBox(
-              height: 28,
+              height: 8,
             ),
-            DrawerItem(),
-
+            DrawerItemsListView(),
           ],
         ),
       ),
