@@ -4,26 +4,17 @@ import 'package:flutter_svg/svg.dart';
 import '../models/drawer_item_model.dart';
 import '../utils/app_images.dart';
 import '../utils/app_styles.dart';
+import 'active_and_inactive_drawer_item.dart';
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, required this.drawerItemModel});
+  const DrawerItem({super.key, required this.drawerItemModel,required this.isActive});
 final DrawerItemModel drawerItemModel;
+final bool isActive ;
   @override
   Widget build(BuildContext context) {
     return Card(
       color: const Color(0xffFFFFFF),
       elevation: 0,
-      child: ListTile(
-        leading:  FittedBox(
-          fit: BoxFit.scaleDown,
-          child: SvgPicture.asset(
-            drawerItemModel.image,
-            // height: 24 ,
-            // width: 24,
-          ),
-        ),
-        title:   Text(drawerItemModel.title,style:AppStyles.styleRegular16),
-
-      ),
+      child:isActive? ActiveDrawerItem(drawerItemModel: drawerItemModel,):InActiveDrawerItem(drawerItemModel: drawerItemModel,),
     );
   }
 }

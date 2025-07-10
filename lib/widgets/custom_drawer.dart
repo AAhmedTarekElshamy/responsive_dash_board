@@ -7,6 +7,7 @@ import '../models/user_info_model.dart';
 import '../utils/app_images.dart';
 import '../utils/app_styles.dart';
 import 'drawer_item.dart';
+import 'drawer_item_list.dart';
 import 'drawer_item_list_view.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -23,15 +24,15 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xffFFFFFF),
-      child: const Padding(
-        padding: EdgeInsets.all(16.0),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            UserInfoListTile(userInfoModel: userInfoModel),
-            SizedBox(
+            const UserInfoListTile(userInfoModel: userInfoModel),
+            const SizedBox(
               height: 8,
             ),
-            DrawerItemsListView(),
+            DrawerItemListView(),
           ],
         ),
       ),
