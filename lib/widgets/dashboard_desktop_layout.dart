@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'all_expenses.dart';
 import 'custom_drawer.dart';
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -11,18 +12,11 @@ class DashboardDesktopLayout extends StatelessWidget {
         Expanded(
             flex: 280,
             child: CustomDrawer()),
-        // Expanded(
-        //   flex: 1,
-        //     child: Column()),
+       // SizedBox(width: 32,),
 
         Expanded(
           flex: 604,
-          child: Center(
-            child: Text(
-              'All Expenses',
-              style: TextStyle(fontSize: 24),
-            ),
-          ),
+          child: AllExpenses(),
         ),
         Expanded(
           flex: 468,
