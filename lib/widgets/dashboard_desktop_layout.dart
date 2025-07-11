@@ -19,7 +19,7 @@ class DashboardDesktopLayout extends StatelessWidget {
           flex: 604,
           child: Center(
             child: Text(
-              'Main Content Area',
+              'All Expenses',
               style: TextStyle(fontSize: 24),
             ),
           ),
