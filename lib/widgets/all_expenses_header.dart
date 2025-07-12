@@ -10,7 +10,7 @@ class AllExpensesHeader extends StatelessWidget {
     return const Row(
       children: [
       Text('All Expenses',style: AppStyles.styleSemiBold20,),
-        Expanded(child: SizedBox()),
+        Spacer(),
         RangeOptions(),
       ],
     );

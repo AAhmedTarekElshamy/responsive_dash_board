@@ -22,9 +22,8 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
+    return
+      Container(
         color: const Color(0xffFFFFFF),
         child: CustomScrollView(
             slivers: [
@@ -54,7 +53,7 @@ class CustomDrawer extends StatelessWidget {
             ],
           ),
 
-      ),
-    );
+      )
+     ;
   }
 }

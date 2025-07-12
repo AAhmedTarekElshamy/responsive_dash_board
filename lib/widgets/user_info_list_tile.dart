@@ -15,10 +15,17 @@ class UserInfoListTile extends StatelessWidget {
       // height: 80,
      elevation: 0,
       child: ListTile(
-        leading: SvgPicture.asset(
-          userInfoModel.image,
-          height: 38.75,
-          width: 36.97,
+        leading:SizedBox(
+          width: 40,
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: SvgPicture.asset(
+              userInfoModel.image,
+              height: 38.75,
+             // width: 24, // Use a safe smaller width than the SizedBox width
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
         title: Text(userInfoModel.title, style: AppStyles.styleSemiBold16),
         subtitle: Text(

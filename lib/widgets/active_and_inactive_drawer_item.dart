@@ -10,21 +10,16 @@ class InActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading:  FittedBox(
-        fit: BoxFit.scaleDown,
-        child: SvgPicture.asset(
-          drawerItemModel.image,
-          // height: 24 ,
-          // width: 24,
-        ),
+      leading: SvgPicture.asset(
+        drawerItemModel.image,
+        // height: 24 ,
+        // width: 24,
       ),
-      title:   FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(drawerItemModel.title,style:AppStyles.styleRegular16)),
-
+      title: Text(drawerItemModel.title, style: AppStyles.styleRegular16),
     );
   }
 }
+
 class ActiveDrawerItem extends StatelessWidget {
   const ActiveDrawerItem({super.key, required this.drawerItemModel});
   final DrawerItemModel drawerItemModel;
@@ -32,7 +27,7 @@ class ActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading:  FittedBox(
+      leading: FittedBox(
         fit: BoxFit.scaleDown,
         child: SvgPicture.asset(
           drawerItemModel.image,
@@ -40,15 +35,14 @@ class ActiveDrawerItem extends StatelessWidget {
           // width: 24,
         ),
       ),
-      title:   FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(drawerItemModel.title,style:AppStyles.styleRegular16.copyWith(color: const Color(0xff4EB7F2)))),
-    trailing: Container(
-     // height: 48,
-      width: 3.27,
-      color:  const Color(0xff4EB7F2),
-    ),
+      title: Text(drawerItemModel.title,
+          style: AppStyles.styleRegular16
+              .copyWith(color: const Color(0xff4EB7F2))),
+      trailing: Container(
+        // height: 48,
+        width: 3.27,
+        color: const Color(0xff4EB7F2),
+      ),
     );
   }
 }
-
