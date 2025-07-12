@@ -4,6 +4,7 @@ import '../models/all_expensess_item_model.dart';
 import '../utils/app_images.dart';
 import 'all_expenses_header.dart';
 import 'all_expenses_item.dart';
+import 'all_expenses_items_list_view.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
@@ -25,15 +26,8 @@ class AllExpenses extends StatelessWidget {
             AllExpensesHeader(),
 
             Padding(
-              padding: EdgeInsets.only(top: 16.0,left: 12),
-              child: AllExpensesItem(
-                allExpensessItemModel: AllExpensessItemModel(
-                  image: Assets.imagesIncome,
-                  title: 'Income',
-                  date: 'April 2022',
-                  price: '\$20,129',
-                ),
-              ),
+              padding: EdgeInsets.only(top: 16.0 ),
+              child: AllExpensesItemsListView(),
             ),
           ],
         ),
