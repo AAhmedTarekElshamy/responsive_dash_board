@@ -4,40 +4,67 @@ import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import '../utils/app_images.dart';
 import 'all_expenses_item.dart';
 
-class AllExpensesItemsListView extends StatelessWidget {
+class AllExpensesItemsListView extends StatefulWidget {
   const AllExpensesItemsListView({super.key});
 
-  static const List<AllExpensessItemModel> ExpensesItemsList = [
-    AllExpensessItemModel(
+  @override
+  State<AllExpensesItemsListView> createState() =>
+      _AllExpensesItemsListViewState();
+}
+
+class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
+  final List<AllExpensessItemModel> ExpensesItemsList = [
+    const AllExpensessItemModel(
         image: Assets.imagesBalance,
         title: 'Balance',
         date: 'April 2022',
         price: r'$20,129'),
-    AllExpensessItemModel(
+    const AllExpensessItemModel(
         image: Assets.imagesIncome,
         title: 'Income',
         date: 'April 2022',
         price: r'$20,129'),
-    AllExpensessItemModel(
+    const AllExpensessItemModel(
         image: Assets.imagesExpenses,
         title: 'Expenses',
         date: 'April 2022',
         price: r'$20,129'),
   ];
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: ExpensesItemsList.asMap().entries.map((e){
-        int index= e.key;
+      children:
+          ExpensesItemsList.asMap().entries.map((e) {
+        int index = e.key;
         var item = e.value;
-        if(index == 1){
+        if (index == 1) {
           return Expanded(
-            child: Padding(padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(allExpensessItemModel: item,),
+            child: GestureDetector(
+              onTap: (){
+                updateIndex(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensesItem(
+                  allExpensessItemModel: item,
+                  isSelected: selectedIndex == index,
+                ),
+              ),
             ),
           );
         } else {
-          return Expanded(child: AllExpensesItem(allExpensessItemModel: item,));
+          return Expanded(
+            child: GestureDetector(
+              onTap: (){
+                updateIndex(index);
+              },
+              child: AllExpensesItem(
+            allExpensessItemModel: item,
+            isSelected: selectedIndex == index,
+          ),
+            ),
+          );
         }
       }).toList(),
     );
@@ -58,5 +85,13 @@ class AllExpensesItemsListView extends StatelessWidget {
     //     allExpensessItemModel: ExpensesItemsList[index],
     //   );
     // });
+  }
+
+  void updateIndex(int index) {
+    setState(() {
+      if (selectedIndex != index) {
+        selectedIndex = index;
+      }
+    });
   }
 }
