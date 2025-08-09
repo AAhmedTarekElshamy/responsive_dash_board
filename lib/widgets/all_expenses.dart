@@ -5,23 +5,17 @@ import '../utils/app_images.dart';
 import 'all_expenses_header.dart';
 import 'all_expenses_item.dart';
 import 'all_expenses_items_list_view.dart';
+import 'custom_background_container.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20.0, left: 20),
-      child: Container(
-        padding: const EdgeInsets.all(20.0),
-        decoration: ShapeDecoration(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          color: Colors.white,
-        ),
-        child: const Column(
+    return const Padding(
+      padding: EdgeInsets.only(top: 20.0, left: 20),
+      child: CustomBackgroundContainer(
+        child: Column(
           children: [
             AllExpensesHeader(),
 
