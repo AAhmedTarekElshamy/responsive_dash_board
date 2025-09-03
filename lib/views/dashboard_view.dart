@@ -20,7 +20,7 @@ class _DashBoradViewState extends State<DashBoradView> {
     return const Scaffold(
 
 
-      backgroundColor: Color(0xffE5E5E5),
+      backgroundColor: Color(0xffF6F8FB),
 
       body: DashboardDesktopLayout(),
 

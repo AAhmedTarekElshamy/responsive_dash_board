@@ -14,23 +14,25 @@ class UserInfoListTile extends StatelessWidget {
       color: const Color(0xffFAFAFA),
       // height: 80,
      elevation: 0,
-      child: ListTile(
-        leading:SizedBox(
-          width: 40,
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: SvgPicture.asset(
-              userInfoModel.image,
-              height: 38.75,
-             // width: 24, // Use a safe smaller width than the SizedBox width
-              fit: BoxFit.contain,
+      child: Center(
+        child: ListTile(
+          leading:SizedBox(
+            width: 40,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: SvgPicture.asset(
+                userInfoModel.image,
+                height: 38.75,
+               // width: 24, // Use a safe smaller width than the SizedBox width
+                fit: BoxFit.contain,
+              ),
             ),
           ),
-        ),
-        title: Text(userInfoModel.title, style: AppStyles.styleSemiBold16),
-        subtitle: Text(
-          userInfoModel.subTitle,
-          style: AppStyles.styleRegular12,
+          title: Text(userInfoModel.title, style: AppStyles.styleSemiBold16),
+          subtitle: Text(
+            userInfoModel.subTitle,
+            style: AppStyles.styleRegular12,
+          ),
         ),
       ),
     );
