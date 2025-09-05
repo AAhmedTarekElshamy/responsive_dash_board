@@ -20,7 +20,7 @@ class AllExpenses extends StatelessWidget {
             AllExpensesHeader(),
 
             Padding(
-              padding: EdgeInsets.only(top: 16.0 ),
+              padding: EdgeInsets.only(top: 10.0 ),
               child: AllExpensesItemsListView(),
             ),
           ],
