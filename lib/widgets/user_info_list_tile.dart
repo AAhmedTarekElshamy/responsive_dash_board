@@ -22,7 +22,8 @@ class UserInfoListTile extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: SvgPicture.asset(
                 userInfoModel.image,
-                height: 38.75,
+                height:38.75,
+                //38.75,
                // width: 24, // Use a safe smaller width than the SizedBox width
                 fit: BoxFit.contain,
               ),

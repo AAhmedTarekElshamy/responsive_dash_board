@@ -11,7 +11,7 @@ import 'latest_transaction_list_view.dart';
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Latest Transaction',style: AppStyles.styleMedium16,),
-            SizedBox(height: 16,),
+            SizedBox(height: 8,),
             LatestTransactionListView(),
           ],
         );
