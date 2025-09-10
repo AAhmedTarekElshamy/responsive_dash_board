@@ -5,6 +5,7 @@ import 'package:responsive_dash_board/widgets/quick_invoice_form.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_header.dart';
 
 
+import 'custom_divider.dart';
 import 'custom_text_field.dart';
 import 'latest_transaction.dart';
 
@@ -21,7 +22,7 @@ class QuickInvoice extends StatelessWidget {
           QuickInvoiceHeader(),
           SizedBox(height: 10,),
           LatestTransaction(),
-          Divider(height: 24,color: Color(0xffF1F1F1),),
+          CustomDivider(height: 24,),
           SingleChildScrollView(child: QuickInvoiceForm()),
 
 

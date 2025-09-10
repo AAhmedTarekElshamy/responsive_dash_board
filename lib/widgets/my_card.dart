@@ -19,7 +19,7 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
           ),
           image: const DecorationImage(
-              image: AssetImage(Assets.imagesCardBackground)),
+              image: AssetImage(Assets.imagesCardBackground),fit: BoxFit.fill),
           color: const Color(0xff4EB7F2),
         ),
         child: Column(
