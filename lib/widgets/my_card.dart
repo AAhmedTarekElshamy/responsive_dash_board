@@ -11,12 +11,12 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio: 540 / 215,
       child: Container(
         padding: const EdgeInsets.only(right: 24),
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(12),
           ),
           image: const DecorationImage(
               image: AssetImage(Assets.imagesCardBackground),fit: BoxFit.fill),
@@ -49,7 +49,7 @@ class MyCard extends StatelessWidget {
                const SizedBox(height:8,),
 
                    Text('12/20 - 124',style: AppStyles.styleRegular16.copyWith(color: Colors.white),),
-               const SizedBox(height:27,),
+               const SizedBox(height:22,),
 
 
           ],
