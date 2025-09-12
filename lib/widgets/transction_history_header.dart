@@ -20,7 +20,7 @@ class TransctionHistoryHeader extends StatelessWidget {
 
               ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
             Text('13 April 2022',style: AppStyles.styleMedium16.copyWith(color: const Color(0xffAAAAAA)),),
           ],
         ),

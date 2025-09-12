@@ -62,5 +62,6 @@ class Assets {
   static const String imagesWalletAccount = "assets/images/wallet_account.svg";
   static const String imagesCardBackground = "assets/images/cardBackground.png";
   static const String imagesCardSmall  = "assets/images/card_small_image.svg";
+  static const String incomeSection  = "  assets/images/income_image.svg";
 
 }

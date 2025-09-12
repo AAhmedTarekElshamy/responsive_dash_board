@@ -12,8 +12,7 @@ class TransationHistory extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TransctionHistoryHeader(),
-
-        SizedBox(height: 16),
+        SizedBox(height: 9),
         TransactionHistoryListview(),
 
       ],
