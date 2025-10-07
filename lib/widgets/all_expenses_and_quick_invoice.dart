@@ -3,15 +3,15 @@ import 'package:responsive_dash_board/widgets/quick_invoice.dart';
 
 import 'all_expenses.dart';
 class AllExpensesAndQuickInvoice extends StatelessWidget {
-  const AllExpensesAndQuickInvoice({super.key});
-
+  const AllExpensesAndQuickInvoice({super.key, required this.isMobileLayout});
+ final bool isMobileLayout;
   @override
   Widget build(BuildContext context) {
-    return const  Column(
+    return Column(
     children: [
-    AllExpenses(),
+    AllExpenses(isMobileLayout: isMobileLayout,),
 
-    QuickInvoice(),
+    const QuickInvoice(),
     ],
     ) ;
   }

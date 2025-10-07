@@ -15,7 +15,10 @@ class InActiveDrawerItem extends StatelessWidget {
         // height: 24 ,
         // width: 24,
       ),
-      title: Text(drawerItemModel.title, style: AppStyles.styleRegular16),
+      title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(drawerItemModel.title, style: AppStyles.styleRegular16(context))),
     );
   }
 }
@@ -35,9 +38,13 @@ class ActiveDrawerItem extends StatelessWidget {
           // width: 24,
         ),
       ),
-      title: Text(drawerItemModel.title,
-          style: AppStyles.styleRegular16
-              .copyWith(color: const Color(0xff4EB7F2))),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(drawerItemModel.title,
+            style: AppStyles.styleRegular16(context)
+                .copyWith(color: const Color(0xff4EB7F2))),
+      ),
       trailing: Container(
         // height: 48,
         width: 3.27,

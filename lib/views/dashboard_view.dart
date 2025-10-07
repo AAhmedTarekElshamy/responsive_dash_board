@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/adaptive_layout_widget.dart';
 
+import '../widgets/dash_board_mobile_layout.dart';
+import '../widgets/dash_board_tablet_layout.dart';
 import '../widgets/dashboard_desktop_layout.dart';
-
 
 class DashBoradView extends StatefulWidget {
   const DashBoradView({super.key});
@@ -18,26 +19,16 @@ class _DashBoradViewState extends State<DashBoradView> {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return Scaffold(
-
-
       backgroundColor: const Color(0xffF6F8FB),
 
-      body:AdaptiveLayout(
-        mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) =>const SizedBox(),
+      body: AdaptiveLayout(
+        mobileLayout: (context) => const DashBoardMobileLayout(),
+        tabletLayout: (context) => const DashBoardTabletLayout(),
         desktopLayout: (context) => const DashboardDesktopLayout(),
       ),
 
       //DashboardDesktopLayout(),
-
     );
   }
 }
-/*
-* AdaptiveLayout(
-        mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) =>const SizedBox(),
-        desktopLayout: (context) => const DashboardDesktopLayout(),
-      ),
-*
-* */
+

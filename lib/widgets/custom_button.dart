@@ -19,7 +19,7 @@ final Color txtColor;
            backgroundColor:backColor ?? const Color(0xff4EB7F2) ,
          ),
           onPressed: (){},
-          child:  Text('Send Money',style: AppStyles.styleSemiBold18.copyWith(color:txtColor?? const Color(0xffFFFFFF ) ) ,)
+          child:  Text('Send Money',style: AppStyles.styleSemiBold18(context).copyWith(color:txtColor?? const Color(0xffFFFFFF ) ) ,)
 
 
       ),

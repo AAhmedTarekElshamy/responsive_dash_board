@@ -14,14 +14,14 @@ class TransctionHistoryHeader extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Text('Transaction History',style: AppStyles.styleSemiBold20,),
+                  Text('Transaction History',style: AppStyles.styleSemiBold20(context),),
                 const Spacer(),
-                Text('See all',style: AppStyles.styleMedium16.copyWith(color: const Color(0xff4EB7F2)),),
+                Text('See all',style: AppStyles.styleMedium16(context).copyWith(color: const Color(0xff4EB7F2)),),
 
               ],
             ),
             const SizedBox(height: 5),
-            Text('13 April 2022',style: AppStyles.styleMedium16.copyWith(color: const Color(0xffAAAAAA)),),
+            Text('13 April 2022',style: AppStyles.styleMedium16(context).copyWith(color: const Color(0xffAAAAAA)),),
           ],
         ),
       ),

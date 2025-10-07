@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../utils/app_images.dart';
@@ -11,7 +10,8 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 603 / 215,
+      aspectRatio: 420 / 215,
+      //603 / 215,
       child: Container(
         padding: const EdgeInsets.only(right: 24),
         decoration: ShapeDecoration(
@@ -19,39 +19,45 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           image: const DecorationImage(
-              image: AssetImage(Assets.imagesCardBackground),fit: BoxFit.fill),
+              image: AssetImage(Assets.imagesCardBackground), fit: BoxFit.fill),
           color: const Color(0xff4EB7F2),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
-
           children: [
             ListTile(
               contentPadding:
                   const EdgeInsets.only(left: 31, right: 42, top: 16),
               title: Text(
                 'Name card',
-                style: AppStyles.styleRegular16
+                style: AppStyles.styleRegular16(context)
                     .copyWith(color: const Color(0xffFFFFFF)),
               ),
-              subtitle: const Text(
+              subtitle: Text(
                 'Syah Bandi',
-                style: AppStyles.styleMedium20,
+                style: AppStyles.styleMedium20(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesCardSmall),
             ),
             const Expanded(child: SizedBox()),
-               Text(
-                 '0918 8124 0042 8129',
-                 style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
-               ),
-               const SizedBox(height:8,),
-
-                   Text('12/20 - 124',style: AppStyles.styleRegular16.copyWith(color: Colors.white),),
-               const SizedBox(height:22,),
-
-
+            Text(
+              '0918 8124 0042 8129',
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              '12/20 - 124',
+              style: AppStyles.styleRegular16(context)
+                  .copyWith(color: Colors.white),
+            ),
+            const Flexible(
+                child: SizedBox(
+              height: 22,
+            )),
           ],
         ),
       ),

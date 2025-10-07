@@ -13,26 +13,34 @@ class UserInfoListTile extends StatelessWidget {
     return Card(
       color: const Color(0xffFAFAFA),
       // height: 80,
-     elevation: 0,
+      elevation: 0,
       child: Center(
         child: ListTile(
-          leading:SizedBox(
+          leading: SizedBox(
             width: 40,
             child: Align(
               alignment: Alignment.centerLeft,
               child: SvgPicture.asset(
                 userInfoModel.image,
-                height:38.75,
+                height: 38.75,
                 //38.75,
-               // width: 24, // Use a safe smaller width than the SizedBox width
+                // width: 24, // Use a safe smaller width than the SizedBox width
                 fit: BoxFit.contain,
               ),
             ),
           ),
-          title: Text(userInfoModel.title, style: AppStyles.styleSemiBold16),
-          subtitle: Text(
-            userInfoModel.subTitle,
-            style: AppStyles.styleRegular12,
+          title: FittedBox(
+              alignment: AlignmentDirectional.centerStart,
+              fit: BoxFit.scaleDown,
+              child: Text(userInfoModel.title,
+                  style: AppStyles.styleSemiBold16(context))),
+          subtitle: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoModel.subTitle,
+              style: AppStyles.styleRegular12(context),
+            ),
           ),
         ),
       ),

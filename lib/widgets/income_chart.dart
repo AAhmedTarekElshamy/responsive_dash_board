@@ -31,10 +31,10 @@ return PieChartData(
   ),
   sectionsSpace: 0,
   sections: [
-    PieChartSectionData(value:40 ,radius: activeIndex == 0 ? 20 : 30 ,color: const Color(0xff208CC8),title: 'Design service',showTitle: false),
-    PieChartSectionData(value:25 ,radius:  activeIndex == 1 ? 20 : 30 ,color: const Color(0xff4EB7F2),title: 'Design product',showTitle: false),
-    PieChartSectionData(value:20 ,radius:  activeIndex == 2 ? 20 : 30 ,color: const Color(0xff064061),title: 'Product royalti',showTitle: false),
-    PieChartSectionData(value:22 ,radius:  activeIndex == 3 ? 120 : 30 ,color: const Color(0xffE2DECD),title: 'Other',showTitle: false),
+    PieChartSectionData(value:40 ,radius: activeIndex == 0 ? 50 :40 ,color: const Color(0xff208CC8),title: 'Design service',showTitle: false),
+    PieChartSectionData(value:25 ,radius:  activeIndex == 1 ? 50 :40 ,color: const Color(0xff4EB7F2),title: 'Design product',showTitle: false),
+    PieChartSectionData(value:20 ,radius:  activeIndex == 2 ? 50 :40 ,color: const Color(0xff064061),title: 'Product royalti',showTitle: false),
+    PieChartSectionData(value:22 ,radius:  activeIndex == 3 ? 50 :40 ,color: const Color(0xffE2DECD),title: 'Other',showTitle: false),
   ]
 );
   }

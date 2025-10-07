@@ -21,14 +21,19 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: const EdgeInsets.only(top: 2),
-        itemCount: items.length,
-        shrinkWrap: true,
-        itemBuilder: (context,index) =>IncomeItemDetails(itemDetailsModel: items[index],),
-     // scrollDirection: Axis.vertical,
-
+    return Column(
+      children: items.map((e)=>IncomeItemDetails( itemDetailsModel:e)).toList(),
     );
+
+
+    //   ListView.builder(
+    //   padding: const EdgeInsets.only(top: 2),
+    //     itemCount: items.length,
+    //     shrinkWrap: true,
+    //     itemBuilder: (context,index) =>IncomeItemDetails(itemDetailsModel: items[index],),
+    //  // scrollDirection: Axis.vertical,
+    //
+    // );
   }
 }
 

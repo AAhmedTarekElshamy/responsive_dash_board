@@ -12,11 +12,16 @@ static const List<TransactionModel> items = [
 ];
   @override
   Widget build(BuildContext context) {
-    return   ListView.builder(
-    itemCount: items.length,
-        shrinkWrap: true,
-        itemBuilder: (context,index)=>TransactionItem(transactionModel: items[index],),
-
+    return Column(
+      children: items.map((e)=>TransactionItem(transactionModel:e)).toList(),
     );
+      
+      
+    //   ListView.builder(
+    // itemCount: items.length,
+    //   //  shrinkWrap: true,
+    //     itemBuilder: (context,index)=>TransactionItem(transactionModel: items[index],),
+    //
+    // );
   }
 }

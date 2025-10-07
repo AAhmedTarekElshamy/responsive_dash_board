@@ -12,7 +12,7 @@ decoration: InputDecoration(
  fillColor: const Color(0xffFAFAFA),
   filled: true,
   hintText: titleTextField.hint,
-  hintStyle: AppStyles.styleRegular16.copyWith(color: const Color(0xffAAAAAA)),
+  hintStyle: AppStyles.styleRegular16(context).copyWith(color: const Color(0xffAAAAAA)),
   border:buildBorder(),
   enabledBorder: buildBorder(),
   focusedBorder:  buildBorder(),

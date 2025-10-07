@@ -32,15 +32,16 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
       itemCount:  list.length,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: (){
-            setState(() {
-              if( selectedIndex != index){
-                selectedIndex = index;
-
-              }
-            });
-
+          onTap: () {
+            if (selectedIndex != index) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                setState(() {
+                  selectedIndex = index;
+                });
+              });
+            }
           },
+
           child: Padding(
             padding: const EdgeInsets.only(top: 5.0),
             child: DrawerItem(drawerItemModel: list[index],
