@@ -34,40 +34,83 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children:
-          ExpensesItemsList.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: (){
-                updateIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensesItem(
-                  allExpensessItemModel: item,
-                  isSelected: selectedIndex == index,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              allExpensessItemModel: ExpensesItemsList[0],
+              isSelected: selectedIndex == 0,
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: (){
-                updateIndex(index);
-              },
-              child: AllExpensesItem(
-            allExpensessItemModel: item,
-            isSelected: selectedIndex == index,
           ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              allExpensessItemModel: ExpensesItemsList[1],
+              isSelected: selectedIndex == 1,
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              allExpensessItemModel: ExpensesItemsList[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
+
+    // Row(
+    //   children: ExpensesItemsList.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     var item = e.value;
+    //     if (index == 1) {
+    //       return Expanded(
+    //         child: GestureDetector(
+    //           onTap: () {
+    //             updateIndex(index);
+    //           },
+    //           child: Padding(
+    //             padding: const EdgeInsets.symmetric(horizontal: 12),
+    //             child: AllExpensesItem(
+    //               allExpensessItemModel: item,
+    //               isSelected: selectedIndex == index,
+    //             ),
+    //           ),
+    //         ),
+    //       );
+    //     } else {
+    //       return Expanded(
+    //         child: GestureDetector(
+    //           onTap: () {
+    //             updateIndex(index);
+    //           },
+    //           child: AllExpensesItem(
+    //             allExpensessItemModel: item,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       );
+    //     }
+    //   }).toList(),
+    // );
     // map((e) => Expanded(
     //   child: AllExpensesItem(
     //     allExpensessItemModel: e,
